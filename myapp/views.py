@@ -6,9 +6,16 @@ from django.views import View
 from django.core import serializers
 from .models import *
 
-
 class Home(View):
+
     def get(self, request):
+        return render(request, 'base.html')
+        GetJson.getinfo(self, request)
+
+class GetJson(View):
+
+
+    def getinfo(self, request):
         contact = serializers.serialize('json', Contact.objects.all())
         interest = serializers.serialize('json', Interest.objects.all())
         skill = serializers.serialize('json', Skill.objects.all())
