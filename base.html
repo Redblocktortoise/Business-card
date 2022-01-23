@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ mysite }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}"/>
+
+</head>
+<body>
+<aside class="search-results" id="search">
+    <div class="container">
+        <section class="search-header">
+            <div class="row no-gutters justify-content-between mb-3">
+                <div class="col-6 col-search-close"><a class="js-search" href="#"><i
+                        class="fas fa-times-circle text-muted " aria-hidden="true"></i></a></div>
+            </div>
+            <div id="search-box"></div>
+        </section>
+        <section class="section-search-results">
+            <div id="search-hits"></div>
+        </section>
+    </div>
+</aside>
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+    <div class="container img-thumbnail"><a class="navbar-brand" href="/">Андрей Осипов</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+                aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span></button>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link navbar-brand" href="/"
+                                        data-target="#about"><span>Home</span></a></li>
+                <li class="nav-item one"><a class="nav-link navbar-brand" href="/#skills"
+                                            data-target="#skills"><span>Skills</span></a></li>
+                <li class="nav-item"><a class="nav-link navbar-brand" href="/#projects" data-target="#projects"><span>Projects</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br>
+<div><br></div>
+<span class="js-widget-page d-none"></span>
+<section id="hero" class="home-section wg-hero" style="background-color:#fff">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 order-md-1 text-center text-md-left align-self-center">
+                <div><h2 id="i-am-thomas-george-thomas">Я <strong>Осипов Андрей </strong></h2>
+                    <p>Родился в городе Сочи 22 августа 1997 года.<br>
+                    В 2019 году окончил бакалавриат Санкт-Петербургского электролехнического университета "ЛЭТИ" (специальность Информационные ситсемы и технологии).<br>
+                    В 2021 году с отличием окончил магистратуру Санкт-Петербургского электролехнического университета "ЛЭТИ" (специальность Информационные ситсемы и технологии).<br>
+                    Мои хобби: программирование, походы, коньки, ролики, сбор грибов.</p><br>
+
+                </div>
+                <h3><strong>Контакты:</strong>
+                    <p><h5>Электронная почта:</h5>osandre97@gmail.com</p>
+                    <p><h5>Номер телефона:</h5>+79111946077</p>
+                    <p><h5>Telegram:</h5>@KyzmichTuzikov</p><br></div>
+            <div class="col-10 mx-auto col-md-6 order-md-2 hero-media"><img
+                    class="hero-img img-fluid img-thumbnail rounded"
+                    src="{% static '/andrey2.jpg' %}" alt=""></div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+
+<section id="skills" class="home-section wg-featurette">
+    <div class="container">
+        <div class="row featurette">
+            <div class="col-12 section-heading"><h1>Мои навыки:</h1>
+                <p><br></p></div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png"
+                            Width="150" Height="150"></div>
+                    <h3>Python</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png" Width="150"
+                            Height="150"></div>
+                    <h3>Django</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://technowhisp.com/wp-content/uploads/2017/08/django_orm_320.png" Width="200"
+                            Height="150"></div>
+                    <h3>Django ORM</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://storage.caktusgroup.com/media/blog-images/drf-logo2.png" Width="200"
+                            Height="150"></div>
+                    <h3>Django REST</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://plugins.jetbrains.com/files/12820/106974/icon/pluginIcon.svg" Width="150"
+                            Height="150"></div>
+                    <h3>Redis</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://www.docker.com/sites/default/files/d8/2019-07/vertical-logo-monochromatic.png"
+                            Width="150" Height="150"></div>
+                    <h3>Docker</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://www.docker.com/blog/wp-content/uploads/2020/02/Compose.png" Width="150"
+                            Height="150"></div>
+                    <h3>Docker Compose</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img src="https://rtfm.co.ua/wp-content/uploads/2017/06/kuber.png"
+                                                      Width="150" Height="150"></div>
+                    <h3>Kubernetes</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://media-exp1.licdn.com/dms/image/C4E0BAQFVNia9avQ6aQ/company-logo_200_200/0/1570661875266?e=2159024400&v=beta&t=kPTDQ9rkzAq2-GZFDWhKYVN5XvaJUrHypJfmTpaakok"
+                            Width="150" Height="150"></div>
+                    <h3>Nginx</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img src="https://img.stackshare.io/service/1075/celery.png"
+                                                      Width="150" Height="150"></div>
+                    <h3>Celery</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img src="https://cdn.worldvectorlogo.com/logos/rabbitmq.svg"
+                                                      Width="150" Height="150"></div>
+                    <h3>Rabbit MQ</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="data:image/png;base64,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"
+                            Width="150" Height="150"></div>
+                    <h3>Mongo DB</h3></div>
+            </div>
+        <!--    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img src="https://avatars.githubusercontent.com/u/6043126?s=280&v=4"
+                                                      Width="150" Height="150"></div>
+                    <h3>SQL Alcemy</h3></div>
+            </div>-->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" Width="150"
+                            Height="150"></div>
+                    <h3>Git</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" Width="150"
+                            Height="150"></div>
+                    <h3>Git Hub</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Linux_logo.jpg" Width="150"
+                            Height="150"></div>
+                    <h3>Linux</h3></div>
+            </div>
+   <!-- -->       <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png"
+                            Width="150" Height="150"></div>
+                    <h3>HTML</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://w7.pngwing.com/pngs/604/592/png-transparent-css3-cascading-style-sheets-logo-html-beautify-blue-angle-text-thumbnail.png"
+                            Width="150" Height="150"></div>
+                    <h3>CSS</h3></div>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+                            Width="150" Height="150"></div>
+                    <h3>Java Script</h3></div>
+           </div>
+         <!--    <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img src="https://cdn.worldvectorlogo.com/logos/react-2.svg"
+                                                      Width="150" Height="150"></div>
+                    <h3>React</h3></div>
+            </div>-->
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://nelson619.files.wordpress.com/2015/09/sql-logo.png"
+                            Width="150" Height="150"></div>
+                    <h3>SQL</h3></div>
+        </div>
+            <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0">
+                <div class="position-relative py-2 shadow featurette-margin">
+                    <div class="progress-bar" style="width:"></div>
+                    <div class="featurette-icon"><img
+                            src="https://brandlogos.net/wp-content/uploads/2016/06/bootstrap-logo-vector-download.jpg"
+                            Width="150" Height="150"></div>
+                    <h3>Bootstrap</h3></div>
+            </div>
+    </div>
+    </div>
+</section>
+<br>
+<br>
+
+<section id="projects" class="home-section wg-accomplishments">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center section-heading"><h1>Мои проекты:</h1>
+                <p><strong>Краткое описание проектов с ссылками на Git Hub:</strong></p></div>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card experience course shadow-sm rounded-0 border-0">
+                    <div class="card-body"><h4 class="card-title exp-title text-muted my-0">Сайт-Визитка</h4>
+                        <br>
+                        <div class="card-subtitle my-0 article-metadata"><span class="middot-divider"></span>
+                            Январь 2022
+                        </div>
+                        <div class="card-text">Использованные технологии: Python, Django, HTML, CSS, Bootstrap</div>
+                        <a class="card-link"
+                           href="https://www.linkedin.com/posts/thomasgeorgethomas_impact-legato-happy-activity-6777437854479077376-whfX"
+                           target="_blank" rel="noopener">Перейти в Git Hub</a></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card experience course shadow-sm rounded-0 border-0">
+                    <div class="card-body"><h4 class="card-title exp-title text-muted my-0">Сайт для организации курсов</h4>
+                        <br>
+                        <div class="card-subtitle my-0 article-metadata"><span
+                                class="middot-divider"></span>
+                            Декабрь 2021
+                        </div>
+                        <div class="card-text">Использованные технологии: Python, Django, Django ORM, Bootstrap </div>
+                        <a class="card-link"
+                           href="https://www.youracclaim.com/earner/earned/badge/ba99a0c0-a0a0-4138-92be-4aa3fcad02b3"
+                           target="_blank" rel="noopener">Перейти в Git Hub</a></div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 mb-4">
+                <div class="card experience course shadow-sm rounded-0 border-0">
+                    <div class="card-body"><h4 class="card-title exp-title text-muted my-0">Сайт-блокнот</h4>
+                        <br>
+                        <div class="card-subtitle my-0 article-metadata"><span class="middot-divider"></span>
+                            Январь 2022
+                        </div>
+                        <div class="card-text">Использованные технологии: Python, Django, Django DRF, Celery, Redis
+                        </div>
+                        <a class="card-link"
+                           href="https://www.youracclaim.com/earner/earned/badge/ba99a0c0-a0a0-4138-92be-4aa3fcad02b3"
+                           target="_blank" rel="noopener">Перейти в Git Hub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<br>
+<br>
+
+<div class="container">
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><p>Андрей Осипов 2022
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'script.js' %}"></script>
